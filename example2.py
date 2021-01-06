@@ -17,9 +17,9 @@ class Pipeline:
         
     async def sleep_for(coro, sleep_duration, *args, **kwargs): 
         asyncio.sleep(sleep_duration)
-	      logger.info("Slept for %s seconds", sleep_duration) # fixed the indentation on this line      
+	logger.info("Slept for %s seconds", sleep_duration) # fixed the indentation on this line      
         start = datetime.now()
         await coro(*args, **kwarg) 
-	      end = datetime.now()
-	      time_elapsed = (end - start).total_seconds() # for clarity and to make sure the time is correct, substract start from end instead of end from start
-	      logger.debug("Executed the coroutine for %f seconds", time_elapsed) # changed formatting to something I knew would work - assuming the time_elapsed variable is a floating point number
+	end = datetime.now()
+	time_elapsed = (end - start).total_seconds() # for clarity and to make sure the time is correct, substract start from end instead of end from start
+	logger.debug("Executed the coroutine for %f seconds", time_elapsed) # changed formatting to something I knew would work - assuming the time_elapsed variable is a floating point number
