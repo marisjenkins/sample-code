@@ -6,16 +6,16 @@ import java.util.*;
 
 public class example1 {
 
-  public static void main(String[] args) {
-      thirdElement();
-  }
+	public static void main(String[] args) {
+		thirdElement();
+	}
   
-  // this method set up our list and calls the recursive helper function.
-  // I could set up my list in the main method and therefore eliminate the use of the "helper" method
-  // I choose to keep my main method clean and to the point
-  // This function could also take in an array or list of numbers that it creates the list from, which would be more flexible for future use
+  	// this method set up our list and calls the recursive helper function.
+  	// I could set up my list in the main method and therefore eliminate the use of the "helper" method
+  	// I choose to keep my main method clean and to the point
+  	// This function could also take in an array or list of numbers that it creates the list from, which would be more flexible for future use
 	public static void thirdElement() {
-    // here I create the given example list
+    		// here I create the given example list
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		list.add(1);
 		list.add(2);
@@ -32,7 +32,7 @@ public class example1 {
 	public static void helper(ArrayList<Integer> list) {
 		if (list.size() >= 3) {
 			System.out.println(list.get(2)); // zero based indexing
-      // i could use a loop to iterate over the first 3 elements and remove them instead if i wanted
+      			// i could use a loop to iterate over the first 3 elements and remove them instead if i wanted
 			list.remove(0);
 			list.remove(0);
 			list.remove(0);
